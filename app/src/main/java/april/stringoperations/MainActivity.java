@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         estimatedTime = System.currentTimeMillis() - startTime;
 
         tvOutput.setText(String.format(getString(R.string.reverse_string), stringBuilder.toString()));
-        tvOutput.append(String.format(getString(R.string.elapsed_time), estimatedTime));
+        showElapsedTime(estimatedTime);
     }
 
     private void stringNoSpaces() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         estimatedTime = System.currentTimeMillis() - startTime;
         tvOutput.append(String.format(getString(R.string.without_spaces), stringBuilder.toString()));
-        tvOutput.append(String.format(getString(R.string.elapsed_time), estimatedTime));
+        showElapsedTime(estimatedTime);
     }
 
     //regex variant
@@ -68,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
         estimatedTime = System.currentTimeMillis() - startTime;
         tvOutput.append(String.format(getString(R.string.without_spaces), m.replaceAll(result)));
-        tvOutput.append(String.format(getString(R.string.elapsed_time), estimatedTime));
+        showElapsedTime(estimatedTime);
     }
 
+    private void showElapsedTime(long elapsed) {
+        tvOutput.append(String.format(getString(R.string.elapsed_time), elapsed));
+    }
 }

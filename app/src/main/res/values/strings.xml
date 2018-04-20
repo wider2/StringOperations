@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StringOperations</string>
+
+    <string name="reverse_string" formatted="false">Reverse string: %s</string>
+    <string name="without_spaces" formatted="false">\n\nWithout spaces: %s</string>
+    <string name="elapsed_time" formatted="false">\nElapsed time: %d ms.</string>
+
+</resources>
